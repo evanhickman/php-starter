@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 
 <html lang="eng">
 
@@ -7,34 +7,42 @@
   <title>PHP</title>
   <style>
 
-  body {
-    margin: 0;
-  }
-
-    header {
-      background: #e3e3e3;
-      padding: 2em;
-      text-align: center;
-    }
-
   </style>
 </head>
 
 <body>
 
+ <h1>Task for the Day</h1>
+
 <ul>
-    <?php foreach($names as $name) : ?>
-        <li><?= $name; ?></li>
-    <?php endforeach; ?>
 
-    <?php
-      foreach ($names as $name) {
-        echo "<li>$name</li>";
-      }
-    ?>
+  <li>
+    <strong>Name: </strong> <?= $task['title']; ?>
+  </li>
+
+  <li>
+    <strong>Due Date: </strong> <?= $task['due']; ?>
+  </li>
+
+  <li>
+    <strong>Person Responsible: </strong> <?= $task['assigned_to']; ?>
+  </li>
+
+  <li>
+    <strong>Status: </strong>
+
+    <?php if($task['completed']) : ?>
+      <span class="icon">&#9989;</span>
+
+    <?php else : ?>
+      <span class="icon">Incomplete</span>
+
+    <?php endif; ?>
+
+  </li>
+
 </ul>
-
 
 </body>
 
-</html>
+</html>-->

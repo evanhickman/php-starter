@@ -1,13 +1,7 @@
 <?php
 
-$names = [
-  'Pinky',
-  'Monkey',
-  'Bobby'
-];
-
-// foreach ($names as $name) {
-//   echo $name . ', ';
-// }
+class Task {
+  public function __construct()
+}
 
 require 'index.view.php';

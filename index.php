@@ -1,7 +1,14 @@
 <?php
 
 class Task {
-  public function __construct()
+  protected $description;
+
+  protected $completed;
+
+    public function __construct($description)
+      {
+        $this->description = $description;
+      }
 }
 
 require 'index.view.php';

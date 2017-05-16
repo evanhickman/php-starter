@@ -1,6 +1,6 @@
 <?php
 
-class QueryBuiler
+class QueryBuilder
 {
   protected $pdo;
 
@@ -11,7 +11,7 @@ class QueryBuiler
 
   public function selectAll($table)
   {
-    $statement = $this->$pdo->prepare('select * from {$table}');
+    $statement = $this->pdo->prepare("select * from {$table}");
 
     $statement->execute();
 

@@ -1,18 +1,10 @@
 <?php
 
-require 'task.php';
 require 'functions.php';
+require 'Task.php';
 
 $pdo = connectToDb();
 
-function fetchAllTasks($pdo) {
-
-  $statement = $pdo->prepare('select * from todos');
-
-  $statement->execute();
-
-  return $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
-
-}
+$tasks = fetchAllTasks($pdo);
 
 require 'index.view.php';

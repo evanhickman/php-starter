@@ -1,10 +1,11 @@
 <?php
 
-function ageChecker($age) {
-  if ($age >= 21) {
-    echo 'Come on in!';
-  } else {
-    echo 'Scram kid!';
+function connectToDb() {
+  try {
+    $pdo = new PDO('mysql:host=127.0.0.1;dbname=mytodo', 'root', '');
+
+  } catch (PDOException $e) {
+    die($e->getMessage());
   }
 }
 

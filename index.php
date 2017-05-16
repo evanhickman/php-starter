@@ -1,36 +1,18 @@
 <?php
 
+require 'task.php';
+require 'functions.php';
 
-class Task {
+$pdo = connectToDb();
 
-  public $description;
+function fetchAllTasks($pdo) {
 
-  public $completed = false;
+  $statement = $pdo->prepare('select * from todos');
 
-  public function __construct($description)
-    {
-      $this->description = $description;
-    }
+  $statement->execute();
 
-  public function complete()
-    {
-      $this->completed = true;
-    }
+  return $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
 
-  public function isComplete()
-    {
-      return $this->completed;
-    }
 }
-
-$tasks = [
-  new Task('Go to the store'),
-  new Task('Finish pooping'),
-  new Task('Clean my room')
-];
-
-$tasks[0]->complete();
-
-
 
 require 'index.view.php';

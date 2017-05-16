@@ -1,11 +1,10 @@
 <?php
 
-$query = require 'bootstrap.php';
+$database = require 'core/bootstrap.php';
 
-require 'Task.php';
-
-
-
-$tasks = $query->selectAll('todos');
-
-require 'index.view.php';
+$routes = [
+  ''              => 'controllers/index.php',
+  'about'         => 'controllers/about.php',
+  'about/culture' => 'controllers/about-culture.php',
+  'contact'       => 'controllers/contact.php',
+]

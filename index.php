@@ -2,9 +2,10 @@
 
 $database = require 'core/bootstrap.php';
 
-$routes = [
-  ''              => 'controllers/index.php',
-  'about'         => 'controllers/about.php',
-  'about/culture' => 'controllers/about-culture.php',
-  'contact'       => 'controllers/contact.php',
-]
+$router = new Router;
+
+require 'views/routes.php';
+
+var_dump($_SERVER);
+
+// require $route->direct();

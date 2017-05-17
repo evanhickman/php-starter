@@ -13,4 +13,4 @@
 
 <body>
 
-<?php require('partials/nav.php'); ?>
+<?php require('nav.php'); ?>

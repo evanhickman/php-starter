@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
-
-</head>
-
-
-<body>
-
-    <?php require('partials/nav.php'); ?>
+<?php require('partials/head.php'); ?>
 
     <h1>About Us</h1>
 
-</body>
-
+<?php require('partials/footer.php'); ?>
 
 

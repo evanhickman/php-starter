@@ -1,11 +1,6 @@
 <?php
 
-$database = require 'core/bootstrap.php';
+require 'core/bootstrap.php';
 
-$router = new Router;
-
-require 'views/routes.php';
-
-var_dump($_SERVER);
-
-// require $route->direct();
+require Router::load('views/routes.php')
+    ->direct(Request::uri());

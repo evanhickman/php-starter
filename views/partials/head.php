@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="eng">
 
 <head>
 
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>PHP</title>
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+
 
 </head>
 
-
 <body>
 
-    <?php require('partials/nav.php'); ?>
-
-    <h1>About Us</h1>
-
-</body>
-
-
-
+<?php require('partials/nav.php'); ?>
